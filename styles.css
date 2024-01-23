@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 900px; /* 设置容器最大宽度 */
+    margin: 0 auto; /* 居中显示 */
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.user-controls a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.user {
+    width: 180px;
+    height: 250px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.2s; /* 添加过渡效果 */
+}
+
+.user img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.user h3, .user p {
+    margin: 10px 0;
+}
+
+.user:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大卡片 */
+    cursor: pointer; /* 鼠标悬停时显示手型光标 */
+}
+
+.user .info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.user:hover .info {
+    display: block; /* 鼠标悬停时显示个人信息 */
+}
+
+
+
+@media (max-width: 800px) {
+    .user {
+        width: calc(20% - 20px); /* 在小屏幕上每行显示5个用户项 */
+    }
+}
